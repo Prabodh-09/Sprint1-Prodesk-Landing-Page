@@ -1,28 +1,34 @@
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
+document.addEventListener("DOMContentLoaded", () => {
 
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
 
-const themeButtons = document.querySelectorAll(".theme-toggle");
+  if (!hamburger || !navLinks) {
+    console.error("Hamburger or navLinks not found");
+    return;
+  }
 
-themeButtons.forEach((button) => {
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
 
-  button.addEventListener("click", () => {
+  const themeButtons = document.querySelectorAll(".theme-toggle");
 
-    document.body.classList.toggle("dark-mode");
+  themeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
 
-    themeButtons.forEach((btn) => {
+      document.body.classList.toggle("dark-mode");
+      document.documentElement.classList.toggle("dark");
 
-      if(document.body.classList.contains("dark-mode")){
-        btn.textContent = "Light Mode";
-      } else {
-        btn.textContent = "Dark Mode";
-      }
+      themeButtons.forEach((btn) => {
+        if (document.body.classList.contains("dark-mode")) {
+          btn.textContent = "Light Mode";
+        } else {
+          btn.textContent = "Dark Mode";
+        }
+      });
 
     });
-
   });
 
 });

@@ -6,6 +6,14 @@
 
   <title>Prodesk IT</title>
 
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+  tailwind.config = {
+    darkMode: 'class'
+  }
+</script>
+
   <link rel="stylesheet" href="style.css" />
 
   <!-- Font Awesome Icons -->
@@ -17,54 +25,220 @@
 
 <body>
 
-<header class="header">
+<header
+  class="
+    sticky
+    top-4
+    z-50
 
-  <nav class="navbar">
+    px-4
+    md:px-6
+
+    relative  
+  ">
+
+  <!-- PREMIUM GLASS NAVBAR -->
+
+<nav
+  class="
+    max-w-7xl
+    mx-auto
+
+    h-20
+
+    px-6
+    lg:px-8
+
+    flex
+    items-center
+    justify-between
+
+    rounded-[28px]
+
+    border
+    border-white/10
+
+    bg-white/10
+    dark:bg-black/30
+
+    backdrop-blur-[24px]
+
+    shadow-[0_8px_32px_rgba(0,0,0,0.18)]
+
+    supports-[backdrop-filter]:bg-white/10
+
+    transition
+    duration-300
+
+    before:absolute
+    before:inset-0
+
+    before:rounded-[28px]
+
+    before:bg-white/5
+
+    before:opacity-50
+
+    before:pointer-events-none
+  ">
+
+  <div class="mobile-menu hidden md:hidden absolute top-full mt-3 right-0 w-64 p-6 rounded-2xl shadow-xl backdrop-blur-2xl bg-white/80 dark:bg-slate-900/90 border border-white/10 z-50 flex flex-col gap-5 nav-links">
+  
+  <a href="#">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+
+  <button class="theme-toggle mt-4 px-4 py-2 rounded-xl bg-yellow-400 text-black font-semibold">
+    Theme
+  </button>
+
+</div>
 
     <!-- LOGO -->
 
-    <div class="logo">
-      <img src="assets/logo.png" alt="Prodesk IT Logo">
+    <div class="flex items-center h-full">
+
+      <img
+        src="assets/logo.png"
+        alt="Prodesk IT Logo"
+
+        class="
+          h-14
+          md:h-16
+
+          w-auto
+          object-contain
+          select-none
+        ">
 
     </div>
 
-    <!-- NAVIGATION -->
+    <!-- DESKTOP NAV -->
 
-    <ul class="nav-links">
+    <ul
+      class="
+        hidden
+        md:flex
 
-      <li><a href="#">Home</a></li>
+        items-center
 
-      <li><a href="#">About</a></li>
+        gap-10
 
-      <li><a href="#">Services</a></li>
+        text-sm
+        font-medium
 
-      <li><a href="#">Contact</a></li>
+        text-slate-700
+        dark:text-slate-200
+      ">
 
-      <li class="mobile-theme-btn">
+      <li>
+        <a
+          href="#"
 
-        <button class="theme-toggle" aria-label="Toggle Dark Mode">
-          Dark Mode
-        </button>
+          class="
+            hover:text-[#f5d06f]
 
+            transition
+            duration-300
+          ">
+
+          Home
+
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="#about"
+
+          class="
+            hover:text-[#f5d06f]
+
+            transition
+            duration-300
+          ">
+
+          About
+
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="#services"
+
+          class="
+            hover:text-[#f5d06f]
+
+            transition
+            duration-300
+          ">
+
+          Services
+
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="#contact"
+
+          class="
+            hover:text-[#f5d06f]
+
+            transition
+            duration-300
+          ">
+
+          Contact
+
+        </a>
       </li>
 
     </ul>
 
-        <div class="desktop-theme">
+<!-- RIGHT SECTION -->
+<div class="flex items-center gap-3">
 
-      <button class="theme-toggle" aria-label="Toggle Dark Mode">
-      Dark Mode
-      </button>
+  <!-- THEME BUTTON (DESKTOP) -->
+  <button
+    class="theme-toggle hidden md:flex items-center justify-center px-5 py-2.5 rounded-2xl bg-gradient-to-r from-[#f5d06f] via-[#ffe8a3] to-[#f5d06f] text-slate-900 font-semibold text-sm shadow-lg shadow-yellow-500/20 border border-yellow-200/30 hover:scale-105 transition duration-300"
+  >
+    Theme
+  </button>
 
+  <div class="md:hidden relative">
+
+  <!-- HAMBURGER -->
+  <button class="hamburger w-11 h-11 rounded-2xl bg-white/30 dark:bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center">
+
+    <div class="flex flex-col gap-1">
+      <span class="w-5 h-0.5 bg-slate-800 dark:bg-white rounded-full"></span>
+      <span class="w-5 h-0.5 bg-slate-800 dark:bg-white rounded-full"></span>
+      <span class="w-5 h-0.5 bg-slate-800 dark:bg-white rounded-full"></span>
     </div>
 
-    <!-- HAMBURGER -->
+  </button>
 
-    <div class="hamburger" aria-label="Mobile Navigation Menu">
+  <!-- MENU -->
+<div class="mobile-menu hidden fixed top-24 right-4 w-64 p-6 rounded-2xl shadow-xl backdrop-blur-2xl bg-white/90 dark:bg-slate-900/90 border border-white/10 z-50 flex flex-col gap-5">    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
 
-      <span></span>
-      <span></span>
-      <span></span>
+    <button class="theme-toggle mt-4 px-4 py-2 rounded-xl bg-yellow-400 text-black font-semibold">
+      Theme
+    </button>
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
 
     </div>
 
@@ -72,55 +246,218 @@
 
 </header>
 
-<main class="hero">
+<!-- HERO SECTION -->
+<main
+  class="
+    relative
+    -mt-28
+    pt-44
+    min-h-screen
+    flex
+    items-center
+    justify-center
+    px-6
+    bg-cover
+    bg-center
+    bg-no-repeat
+  "
+><div class="absolute inset-0 z-0">
+  <img
+    src="assets/office.png"
+    class="w-full h-full object-cover opacity-30"
+  />
+</div>
 
-  <div class="hero-content">
+<div class="absolute inset-0 z-10 bg-gradient-to-b from-[#faf6ea]/80 to-[#fff29d]/80 dark:from-[#0b1120]/60 dark:to-[#111827]/10"></div>
 
-    <h1>
+
+
+  <!-- HERO CONTENT -->
+
+<div
+  class="
+    relative
+    z-20
+    max-w-3xl
+    text-center
+    p-8
+    md:p-12
+    rounded-[32px]
+    border
+    border-white/15
+    bg-white/10
+    dark:bg-white/[0.04]
+    backdrop-blur-2xl
+    shadow-[0_8px_40px_rgba(0,0,0,0.35)]
+    transition
+    duration-500
+  "
+>
+
+    <!-- HEADING -->
+
+    <h1
+      class="
+        text-4xl
+        md:text-6xl
+
+        font-bold
+
+        leading-tight
+
+        text-black/70
+
+        mb-6
+      ">
+
       We Build Digital Experiences
+
     </h1>
 
-    <p>
-      Helping businesses grow with modern web solutions,
-      digital marketing, and high-performance design.
+    <!-- SUBTEXT -->
+
+    <p
+      class="
+        text-black/40
+
+        text-lg
+        text-black
+        md:text-xl
+
+        leading-relaxed
+
+        mb-8
+      ">
+
+      Transforming ideas into modern digital solutions
+      through innovation, creativity, and technology.
+
     </p>
 
-    <a href="#services" class="hero-btn" aria-label="Get Started">
+    <!-- CTA BUTTON -->
+
+    <a
+      href="#services"
+
+      class="
+        inline-flex
+        items-center
+        justify-center
+
+        px-9
+        py-4
+
+        rounded-2xl
+
+        font-semibold
+
+        text-slate-900
+
+        bg-gradient-to-r
+        from-[#f5d06f]
+        via-[#ffe8a3]
+        to-[#f5d06f]
+
+        border
+        border-yellow-200/30
+
+        shadow-lg
+        shadow-yellow-500/20
+
+        backdrop-blur-xl
+
+        hover:scale-105
+        hover:-translate-y-1
+
+        hover:shadow-[#f5d06f]/40
+
+        transition
+        duration-500
+      ">
+
       Get Started
+
     </a>
 
   </div>
 
 </main>
 
-<section class="about">
+<!-- ABOUT SECTION -->
 
-  <div class="about-container">
+<section
+  id="about"
+  class="py-24 px-6 bg-white dark:bg-[#111827] transition duration-300">
+
+  <div
+    class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
 
     <!-- IMAGE -->
 
-    <div class="about-image">
+    <div class="flex-1">
 
-      <img src="assets/aboutus.png" alt="About Prodesk IT">
+      <img
+        src="assets/aboutus.png"
+        alt="About Prodesk IT"
+
+        class="
+          w-full
+          rounded-3xl
+          object-cover
+          shadow-2xl
+        ">
 
     </div>
 
     <!-- CONTENT -->
 
-    <div class="about-content">
+    <div class="flex-1">
 
-      <h2>About Us</h2>
+      <h2
+        class="
+          text-4xl
+          md:text-5xl
+          font-bold
+          text-slate-900
+          dark:text-white
+          mb-6
+        ">
 
-      <p>
-        We don't just write code; we build the digital backbone of global enterprises.
-        Since 2012, Prodesk IT has evolved from a boutique engineering firm into a global technology powerhouse. We exist to solve the problems others can't—tackling complex legacy migrations, building AI-driven infrastructure, and securing mission-critical data.
-        In a world of "off-the-shelf" solutions, we are the architects of custom advantage. We work alongside our clients as one team with a shared ambition: to achieve extraordinary results, outperform the competition, and redefine industries.
+        About Us
+
+      </h2>
+
+      <p
+        class="
+          text-slate-600
+          dark:text-slate-300
+
+          text-lg
+          leading-relaxed
+
+          mb-6
+        ">
+
+        At Prodesk IT, we specialize in crafting modern
+        digital experiences that help businesses grow online.
+        Our team focuses on innovation, performance,
+        and scalable solutions tailored for the future.
+
       </p>
 
-      <p>
+      <p
+        class="
+          text-slate-600
+          dark:text-slate-300
+
+          text-lg
+          leading-relaxed
+        ">
+
         From web development to digital marketing,
         we combine creativity with technology to deliver
         impactful solutions for brands worldwide.
+
       </p>
 
     </div>
@@ -131,71 +468,275 @@
 
  <!-- Services Section -->
 
-<section class="services" id="services">
+<!-- SERVICES SECTION -->
 
-  <div class="services-header">
+<section
+  id="services"
+  class="
+    py-24
+    px-6
 
-    <h2>Our Services</h2>
+    bg-white
+    dark:bg-[#0f172a]
 
-    <p>
+    transition
+    duration-300
+  ">
+
+  <!-- SECTION HEADER -->
+
+  <div class="max-w-3xl mx-auto text-center mb-16">
+
+    <h2
+      class="
+        text-4xl
+        md:text-5xl
+        font-bold
+
+        text-slate-900
+        dark:text-white
+
+        mb-6
+      ">
+
+      Our Services
+
+    </h2>
+
+    <p
+      class="
+        text-slate-600
+        dark:text-slate-300
+
+        text-lg
+        leading-relaxed
+      ">
+
       We provide modern digital solutions to help businesses
       scale and grow online.
+
     </p>
 
   </div>
 
-  <div class="services-container">
+  <!-- GRID -->
+
+  <div
+    class="
+      max-w-7xl
+      mx-auto
+
+      grid
+      grid-cols-1
+      md:grid-cols-2
+      lg:grid-cols-3
+
+      gap-8
+    ">
 
     <!-- CARD 1 -->
 
-    <div class="service-card">
+    <div
+      class="
+        group
+
+        p-10
+
+        rounded-3xl
+
+        border
+        border-white/10
+
+        bg-white/70
+        dark:bg-slate-800/70
+
+        backdrop-blur-xl
+
+        shadow-xl
+
+        hover:-translate-y-3
+        hover:shadow-blue-500/20
+
+        transition
+        duration-500
+      ">
 
       <img
         src="assets/seo.png"
         alt="SEO Optimization"
-        class="service-icon">
 
-      <h3>SEO Optimization</h3>
+        class="
+          w-70
+          h-40
+          object-contain
 
-      <p>
+          mb-8
+        ">
+
+      <h3
+        class="
+          text-2xl
+          font-semibold
+
+          text-slate-900
+          dark:text-white
+
+          mb-4
+        ">
+
+        SEO Optimization
+
+      </h3>
+
+      <p
+        class="
+          text-slate-600
+          dark:text-slate-300
+
+          leading-relaxed
+        ">
+
         Improve your search rankings and drive more organic
         traffic to your business.
+
       </p>
 
     </div>
 
     <!-- CARD 2 -->
 
-    <div class="service-card">
+    <div
+      class="
+        group
+
+        p-10
+
+        rounded-3xl
+
+        border
+        border-white/10
+
+        bg-white/70
+        dark:bg-slate-800/70
+
+        backdrop-blur-xl
+
+        shadow-xl
+
+        hover:-translate-y-3
+        hover:shadow-blue-500/20
+
+        transition
+        duration-500
+      ">
 
       <img
         src="assets/web.png"
-        alt="Web Development Service"
-        class="service-icon">
+        alt="Web Development"
 
-      <h3>Web Development</h3>
+        class="
+          w-70
+          h-40
+          object-contain
 
-      <p>
+          mb-8
+        ">
+
+      <h3
+        class="
+          text-2xl
+          font-semibold
+
+          text-slate-900
+          dark:text-white
+
+          mb-4
+        ">
+
+        Web Development
+
+      </h3>
+
+      <p
+        class="
+          text-slate-600
+          dark:text-slate-300
+
+          leading-relaxed
+        ">
+
         Modern, responsive, and high-performance websites
         tailored for your business.
+
       </p>
 
     </div>
 
     <!-- CARD 3 -->
 
-    <div class="service-card">
+    <div
+      class="
+        group
+
+        p-10
+
+        rounded-3xl
+
+        border
+        border-white/10
+
+        bg-white/70
+        dark:bg-slate-800/70
+
+        backdrop-blur-xl
+
+        shadow-xl
+
+        hover:-translate-y-3
+        hover:shadow-blue-500/20
+
+        transition
+        duration-500
+      ">
 
       <img
         src="assets/digital_marketing.png"
         alt="Digital Marketing"
-        class="service-icon">
 
-      <h3>Digital Marketing</h3>
+        class="
+          w-70
+          h-40
+          object-contain
 
-      <p>
+          mb-8
+        ">
+
+      <h3
+        class="
+          text-2xl
+          font-semibold
+
+          text-slate-900
+          dark:text-white
+
+          mb-4
+        ">
+
+        Digital Marketing
+
+      </h3>
+
+      <p
+        class="
+          text-slate-600
+          dark:text-slate-300
+
+          leading-relaxed
+        ">
+
         Strategic marketing campaigns designed to increase
         engagement and conversions.
+
       </p>
 
     </div>
@@ -203,104 +744,406 @@
   </div>
 
 </section>
-
 <!-- WHY CHOOSE US -->
 
-<section class="why-us">
 
-  <div class="why-header">
+<section
+  class="
+    py-24
+    px-6
 
-    <h2>Why Choose Us?</h2>
+    bg-slate-50 dark:bg-[#111827]
 
-    <p>
+    bg-gradient-to-b
+
+
+    transition
+    duration-300
+  ">
+
+  <!-- HEADER -->
+
+  <div class="max-w-3xl mx-auto text-center mb-16">
+
+    <h2
+      class="
+        text-4xl
+        md:text-5xl
+        font-bold
+
+        text-slate-900
+        dark:text-white
+
+        mb-6
+      ">
+
+      Why Choose Us?
+
+    </h2>
+
+    <p
+      class="
+        text-lg
+        leading-relaxed
+
+        text-slate-600
+        dark:text-slate-300
+      ">
+
       We combine innovation, expertise, and reliability
       to deliver impactful digital solutions for businesses.
+
     </p>
 
   </div>
 
-  <div class="why-container">
+  <!-- GRID -->
+
+  <div
+    class="
+      max-w-7xl
+      mx-auto
+
+      grid
+      grid-cols-1
+      md:grid-cols-2
+      lg:grid-cols-3
+
+      gap-8
+    ">
 
     <!-- CARD 1 -->
 
-    <div class="why-card">
+    <div
+      class="
+        p-8
 
-      <h3>Expertise</h3>
+        rounded-3xl
 
-      <p>
+        border
+        border-white/10
+
+        bg-white/70
+        dark:bg-slate-800/70
+
+        backdrop-blur-xl
+
+        shadow-xl
+
+        hover:-translate-y-3
+        hover:shadow-blue-500/20
+
+        transition
+        duration-500
+      ">
+
+      <h3
+        class="
+          text-2xl
+          font-semibold
+
+          text-slate-900
+          dark:text-white
+
+          mb-4
+        ">
+
+        Expertise
+
+      </h3>
+
+      <p
+        class="
+          text-slate-600
+          dark:text-slate-300
+
+          leading-relaxed
+        ">
+
         Our team comprises seasoned professionals with
         extensive experience across multiple domains,
         delivering high-quality solutions.
+
       </p>
 
     </div>
 
     <!-- CARD 2 -->
 
-    <div class="why-card">
+    <div
+      class="
+        p-8
 
-      <h3>Innovation</h3>
+        rounded-3xl
 
-      <p>
+        border
+        border-white/10
+
+        bg-white/70
+        dark:bg-slate-800/70
+
+        backdrop-blur-xl
+
+        shadow-xl
+
+        hover:-translate-y-3
+        hover:shadow-blue-500/20
+
+        transition
+        duration-500
+      ">
+
+      <h3
+        class="
+          text-2xl
+          font-semibold
+
+          text-slate-900
+          dark:text-white
+
+          mb-4
+        ">
+
+        Innovation
+
+      </h3>
+
+      <p
+        class="
+          text-slate-600
+          dark:text-slate-300
+
+          leading-relaxed
+        ">
+
         We embrace emerging technologies and modern
         methodologies to create innovative solutions
         that help businesses grow faster.
+
       </p>
 
     </div>
 
     <!-- CARD 3 -->
 
-    <div class="why-card">
+    <div
+      class="
+        p-8
 
-      <h3>Client-Centric Approach</h3>
+        rounded-3xl
 
-      <p>
+        border
+        border-white/10
+
+        bg-white/70
+        dark:bg-slate-800/70
+
+        backdrop-blur-xl
+
+        shadow-xl
+
+        hover:-translate-y-3
+        hover:shadow-blue-500/20
+
+        transition
+        duration-500
+      ">
+
+      <h3
+        class="
+          text-2xl
+          font-semibold
+
+          text-slate-900
+          dark:text-white
+
+          mb-4
+        ">
+
+        Client-Centric Approach
+
+      </h3>
+
+      <p
+        class="
+          text-slate-600
+          dark:text-slate-300
+
+          leading-relaxed
+        ">
+
         We work closely with clients to understand
         their goals and challenges, ensuring solutions
         tailored to their exact needs.
+
       </p>
 
     </div>
 
     <!-- CARD 4 -->
 
-    <div class="why-card">
+    <div
+      class="
+        p-8
 
-      <h3>Reliability</h3>
+        rounded-3xl
 
-      <p>
+        border
+        border-white/10
+
+        bg-white/70
+        dark:bg-slate-800/70
+
+        backdrop-blur-xl
+
+        shadow-xl
+
+        hover:-translate-y-3
+        hover:shadow-blue-500/20
+
+        transition
+        duration-500
+      ">
+
+      <h3
+        class="
+          text-2xl
+          font-semibold
+
+          text-slate-900
+          dark:text-white
+
+          mb-4
+        ">
+
+        Reliability
+
+      </h3>
+
+      <p
+        class="
+          text-slate-600
+          dark:text-slate-300
+
+          leading-relaxed
+        ">
+
         With a strong track record of successful project
         delivery, we ensure quality, consistency,
         and timely execution.
+
       </p>
 
     </div>
 
     <!-- CARD 5 -->
 
-    <div class="why-card">
+    <div
+      class="
+        p-8
 
-      <h3>Product Development</h3>
+        rounded-3xl
 
-      <p>
+        border
+        border-white/10
+
+        bg-white/70
+        dark:bg-slate-800/70
+
+        backdrop-blur-xl
+
+        shadow-xl
+
+        hover:-translate-y-3
+        hover:shadow-blue-500/20
+
+        transition
+        duration-500
+      ">
+
+      <h3
+        class="
+          text-2xl
+          font-semibold
+
+          text-slate-900
+          dark:text-white
+
+          mb-4
+        ">
+
+        Product Development
+
+      </h3>
+
+      <p
+        class="
+          text-slate-600
+          dark:text-slate-300
+
+          leading-relaxed
+        ">
+
         From concept creation to testing and deployment,
         we help businesses transform ideas into successful
         digital products.
+
       </p>
 
     </div>
 
     <!-- CARD 6 -->
 
-    <div class="why-card">
+    <div
+      class="
+        p-8
 
-      <h3>Project Management</h3>
+        rounded-3xl
 
-      <p>
+        border
+        border-white/10
+
+        bg-white/70
+        dark:bg-slate-800/70
+
+        backdrop-blur-xl
+
+        shadow-xl
+
+        hover:-translate-y-3
+        hover:shadow-blue-500/20
+
+        transition
+        duration-500
+      ">
+
+      <h3
+        class="
+          text-2xl
+          font-semibold
+
+          text-slate-900
+          dark:text-white
+
+          mb-4
+        ">
+
+        Project Management
+
+      </h3>
+
+      <p
+        class="
+          text-slate-600
+          dark:text-slate-300
+
+          leading-relaxed
+        ">
+
         We efficiently manage resources, timelines,
         and execution strategies to ensure projects
         stay on track and within budget.
+
       </p>
 
     </div>
@@ -311,13 +1154,47 @@
 
 <!-- Footer -->
 
-<footer class="footer">
+<!-- FOOTER -->
 
-  <div class="footer-container">
+<footer
+  id="contact"
+
+  class="
+    bg-[#020617] dark:bg-black
+
+    border-t
+    border-white/10
+
+    py-8
+    px-6
+  ">
+
+  <div
+    class="
+      max-w-7xl
+      mx-auto
+
+      flex
+      flex-col
+      md:flex-row
+
+      items-center
+      justify-between
+
+      gap-6
+    ">
 
     <!-- COPYRIGHT -->
 
-    <p class="footer-text">
+    <p
+      class="
+        text-slate-400
+
+        text-sm
+
+        text-center
+        md:text-left
+      ">
 
       © 2026 Prodesk IT. All Rights Reserved.
 
@@ -325,32 +1202,134 @@
 
     <!-- SOCIAL ICONS -->
 
-    <div class="social-icons">
+    <div
+      class="
+        flex
+        items-center
 
-      <a href="https://www.instagram.com/prodeskit/" class="social-link">
+        gap-4
+      ">
+
+      <!-- INSTAGRAM -->
+
+      <a
+        href="#"
+
+        class="
+          w-12
+          h-12
+
+          rounded-full
+
+          bg-white/10
+
+          backdrop-blur-lg
+
+          border
+          border-white/10
+
+          flex
+          items-center
+          justify-center
+
+          hover:bg-pink-500/20
+          hover:-translate-y-1
+
+          transition
+          duration-300
+        ">
 
         <img
           src="assets/instagram.png"
           alt="Instagram"
-          class="social-icon">
+
+          class="
+            w-14
+            h-14
+            object-contain
+          ">
 
       </a>
 
-      <a href="mailto:info@prodesk.in" class="social-link">
+      <!-- FACEBOOK -->
+
+      <a
+        href="#"
+
+        class="
+          w-12
+          h-12
+
+          rounded-full
+
+          bg-white/10
+
+          backdrop-blur-lg
+
+          border
+          border-white/10
+
+          flex
+          items-center
+          justify-center
+
+          hover:bg-blue-500/20
+          hover:-translate-y-1
+
+          transition
+          duration-300
+        ">
 
         <img
           src="assets/mail.png"
           alt="Email"
-          class="social-icon">
+
+          class="
+            w-12
+            h-20
+            object-contain
+          ">
 
       </a>
 
-      <a href="https://www.linkedin.com/company/prodesk-it/?originalSubdomain=in" class="social-link">
+      <!-- LINKEDIN -->
+
+      <a
+        href="#"
+
+        class="
+          w-12
+          h-12
+
+          rounded-full
+
+          bg-white/10
+
+          backdrop-blur-lg
+
+          border
+          border-white/10
+
+          flex
+          items-center
+          justify-center
+
+          hover:bg-sky-500/20
+          hover:-translate-y-1
+
+          transition
+          duration-300
+        ">
 
         <img
           src="assets/linkedin.png"
           alt="LinkedIn"
-          class="social-icon">
+
+          class="
+            w-12
+            h-20
+            object-contain
+          ">
 
       </a>
 
@@ -358,14 +1337,7 @@
 
   </div>
 
-</footer>
-
-
-</div>
-
-  </div>
-
-</footer>
+</footer> 
 
   <script src="script.js"></script>
 
